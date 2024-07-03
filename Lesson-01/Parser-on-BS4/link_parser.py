@@ -76,33 +76,6 @@ def recursive_link_fetch(
             recursive_link_fetch(url=link, depth=depth - 1, output=output, file_path=file_path, level=level + 1)
 
 
-# def recursive_link_fetch(url: str, depth: int = 1, output: str = 'both', level: int = 1) -> None:
-#     """
-#     Функция для рекурсивного извлечения ссылок. depth - глубина рекурсии.
-#     """
-#     links = fetch_external_links(url=url)
-#     # Создание счетчика
-#     links_counter = make_counter()
-#
-#     if output == 'terminal' or output == 'both':
-#         print(f'Ссылки, найденные на {url}:')
-#         for link in links:
-#             print(
-#                 f'count: {links_counter():03} / {global_links_counter():08}\t| depth: {level}\t| link: {link}'
-#             )
-#     if output == 'file' or output == 'both':
-#         with open('result/links.txt', 'a', encoding='utf-8') as file:
-#             file.write(f'Ссылки, найденные на {url}:\n')
-#             for link in links:
-#                 file.write(
-#                     f'count: {links_counter():03} / {global_links_counter():08}\t| depth: {level}\t| link: {link}\n'
-#                 )
-#
-#     if depth > 1:
-#         for link in links:
-#             recursive_link_fetch(url=link, depth=depth - 1, output=output, level=level + 1)
-
-
 def make_counter():
     count = 0
 
